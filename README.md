@@ -2,6 +2,15 @@
 
 A comprehensive Customer Relationship Management (CRM) system for managing leads, tracking interactions, and streamlining sales processes. Built with modern web technologies and best practices.
 
+## Live Demo
+
+### Frontend
+[Smart Leads Dashboard Frontend](http://16.16.56.159:3000/dashboard)
+
+### Backend API
+[Smart Leads Dashboard Backend](http://16.16.56.159:5001)
+
+
 ## 📋 Table of Contents
 
 - [Overview](#overview)
