@@ -12,6 +12,8 @@ import { useDebounce } from '../hooks/useDebounce';
 import { LeadStatusEnum, LeadSourceEnum } from '../types/enums';
 import type { Lead, LeadFilters } from '../types';
 import { useAuthStore } from '../store/authStore';
+import { Download } from 'lucide-react';
+import { leadService } from '../services/leadService';
 
 export const Leads: React.FC = () => {
   const { user } = useAuthStore();
@@ -79,12 +81,28 @@ export const Leads: React.FC = () => {
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Leads Management</h1>
           <p className="text-gray-600 dark:text-gray-400">Manage and track all your leads</p>
         </div>
-        {isAdmin && (
-          <Button onClick={() => setIsModalOpen(true)}>
-            <Plus className="w-4 h-4 mr-2" />
-            Add Lead
-          </Button>
-        )}
+     {isAdmin && (
+  <div className="flex items-center gap-3">
+    <Button
+      variant="secondary"
+      onClick={() =>
+        leadService.exportLeadsCSV()
+      }
+    >
+      <Download className="w-4 h-4 mr-2" />
+      Export CSV
+    </Button>
+
+    <Button
+      onClick={() =>
+        setIsModalOpen(true)
+      }
+    >
+      <Plus className="w-4 h-4 mr-2" />
+      Add Lead
+    </Button>
+  </div>
+)}
       </div>
 
       {/* Filters */}
