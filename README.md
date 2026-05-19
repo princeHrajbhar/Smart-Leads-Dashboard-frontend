@@ -10,6 +10,19 @@ A comprehensive Customer Relationship Management (CRM) system for managing leads
 ### Backend API
 [Smart Leads Dashboard Backend](http://16.16.56.159:5001)
 
+# Docker Images
+
+## Frontend Image
+
+```bash
+docker pull rbprince/smart-leads-frontend:latest
+```
+
+## Backend Image
+
+```bash
+docker pull rbprince/smart-leads-backend:latest
+```
 
 ## 📋 Table of Contents
 
